@@ -32,6 +32,9 @@ body{
     padding-top:30px;
    
 }
+    
+
+       
 
 img{
     width: 100%;
@@ -41,8 +44,56 @@ img{
     padding: 1rem;
     margin: 20px;
     border: 1px solid black;
+    box-shadow: 4px 10px 10px 0px;
+}
+.magic:hover{
+    background-color: #fcfff7;
+    box-shadow: 4px 10px 10px 0px red;
+    transition: 0.5s ease all ;
+    animation: shake 2s linear 1;
 }
 
+@keyframes shake {
+  10% {
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  20% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  30% {
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  40% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  60% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  70% {
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  80% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  90% {
+    transform: translateX(1px) rotate(0);
+  }
+
+  100% {
+    transform: translateX(-1px) rotate(0);
+  }
+}
 
    </style>
 
@@ -55,7 +106,7 @@ img{
   <div class="slider slide-show">
 
    
-    <div class="magic">
+    <div class="magic constant-tilt-shake">
          <img  src="https://storage.googleapis.com/msgsndr/y7oYPuRoE7lhKuqUsCFM/media/651d05e248d661275bf095d8.svg+xml"></img>
     </div>
 
