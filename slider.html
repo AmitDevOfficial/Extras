@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style3.css"/>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Scroll Multiple Items</title>
+    <style>
+body{
+    height: 500vh;
+}
+.slick-next:before, .slick-prev:before {
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: #f00;
+}
+
+.main {
+    width: 90%;
+    display:block;
+    margin: 25% auto;
+    border:1px solid black;
+    background-color: #00000052;
+    
+}
+
+.slider{
+    padding-top:30px;
+   
+}
+    
+
+       
+
+img{
+    width: 100%;
+}
+.magic{
+    background-color: white;
+    padding: 1rem;
+    margin: 20px;
+    border: 1px solid black;
+    box-shadow: 4px 10px 10px 0px;
+}
+.magic:hover{
+    background-color: #fcfff7;
+    box-shadow: 4px 10px 10px 0px red;
+    transition: 0.5s ease all ;
+    animation: shake 2s linear 1;
+}
+
+@keyframes shake {
+  10% {
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  20% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  30% {
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  40% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  60% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  70% {
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  80% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  90% {
+    transform: translateX(1px) rotate(0);
+  }
+
+  100% {
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+   </style>
+
+</head>
+<body>
+   
+<div class="main">
+
+  
+  <div class="slider slide-show">
+
+   
+    <div class="magic constant-tilt-shake">
+         <img  src="https://storage.googleapis.com/msgsndr/y7oYPuRoE7lhKuqUsCFM/media/651d05e248d661275bf095d8.svg+xml"></img>
+    </div>
+
+
+    <div class="magic">
+        <img  src="https://storage.googleapis.com/msgsndr/y7oYPuRoE7lhKuqUsCFM/media/651d05e148d661d852f095d7.png"></img>  
+    </div>
+
+
+     <div class="magic">
+       <img  src="https://storage.googleapis.com/msgsndr/y7oYPuRoE7lhKuqUsCFM/media/651d05e148d6619844f095d6.svg+xml"></img>       
+    </div>
+
+
+     <div class="magic">
+       <img  src="https://storage.googleapis.com/msgsndr/y7oYPuRoE7lhKuqUsCFM/media/651d05e1c1ad6702eb904573.png"></img> 
+    </div>
+
+
+    <div class="magic">
+        <img  src="https://storage.googleapis.com/msgsndr/y7oYPuRoE7lhKuqUsCFM/media/651d05e125181c0099007f1c.png"></img>
+    </div>
+
+
+    <div class="magic">         
+        <img  src="https://storage.googleapis.com/msgsndr/y7oYPuRoE7lhKuqUsCFM/media/651d05e125181c1d92007f1b.svg+xml"></img>
+    </div>
+
+
+    <div class="magic">
+         <img  src="https://storage.googleapis.com/msgsndr/y7oYPuRoE7lhKuqUsCFM/media/651d05e125181c0099007f1c.png"></img>
+    </div>
+
+    <div class="magic">
+         <img  src="https://storage.googleapis.com/msgsndr/y7oYPuRoE7lhKuqUsCFM/media/651d05e1c1ad670515904572.svg+xml"></img>
+    </div>
+
+
+    <div class="magic">
+        <img  src="https://storage.googleapis.com/msgsndr/y7oYPuRoE7lhKuqUsCFM/media/651d05e125181c0099007f1c.png"></img>
+    </div>
+
+
+    <div class="magic">
+       <img  src="https://storage.googleapis.com/msgsndr/y7oYPuRoE7lhKuqUsCFM/media/651d05e1c1ad670515904572.svg+xml"></img>
+    </div>
+
+
+  </div>
+
+</div>
+
+<script>
+         $(document).ready(function(){
+           $('.slide-show').slick({
+           slidesToShow: 8,
+           slidesToScroll: 1,
+           arrows: true, 
+           dots: false,
+
+              responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+         });
+    });
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>  
+    
+</html>
+ 
