@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+  
+  .main{
+    display: flex;
+    justify-content: space-between;
+   
+  }
+  .bebo{
+    width: 20rem;
+    margin: 5rem;
+    border: 0.1px solid black;
+    padding: 2rem;
+    border-radius:1rem;
+    background: #f7fbfe;
+  }
+
+  /* Hide Personal and Demo content initially */
+  #div2, #div3 {
+    display: none;
+  }
+  hr{
+    width: 100% ;
+  }
+  .card-text{
+    font-size: 12px;
+  }
+  .card{
+    border:none;
+  }
+  .bot{
+    margin: 4rem 0rem 4rem 0rem;
+     background: #f7fbfe;
+  }
+
+  .card-img-top{
+        box-shadow: 3px 4px 11px -1px;
+  }
+
+  .stro{
+    font-weight:400;
+    font-size: 13px;
+  }
+  .lig{
+    font-weight:300;
+    font-size: 11px;
+    padding-left: 2rem;
+  }
+  table{
+     background: #f7fbfe;
+  }
+  #div2 table{
+    margin-top: 2rem;
+  }
+
+  #div3 table{
+    margin-top: 2rem;n
+  }
+</style>
+</head>
+<body>
+<div class="bebo">
+
+
+<div class="main">
+<p class="emo active">Client</p>
+<p class="emo1">Personal</p>
+<p class="emo2">Demo</p>
+</div>
+<hr>
+
+<div id="div1">
+
+
+  <div class="card" style="width: 16rem;">
+     <div class="card-body">
+    <h6 class="card-title">Catherine Ostheimer</h6>
+    <p class="card-text">VP OF MARKETING</p>
+  </div>
+  <img src="https://pix4free.org/assets/library/2021-06-16/originals/staff.jpg" class="card-img-top" alt="...">
+  <img src="https://cloudninedisco.wpengine.com/wp-content/uploads/2022/05/Years-Savannah.png" class="bot" alt="...">
+  <table>
+    <tr>
+      <td class="stro">YEARS IN INDUSTRY</td>
+      <td class="lig">8 years</td>
+    </tr>
+    
+     <tr class="tab">
+      <td class="stro">FAVORITE CLOUDNINE® SOFTWARE</td>
+      <td class="lig">CloudNine Review</td>
+    </tr>
+   
+    <tr class="tab">
+      <td class="stro">FAVORITE THING ABOUT CLOUDNINE®</td>
+      <td class="lig">Customer focus is in its DNA</td>
+    </tr>
+  </table>
+</div>  
+
+
+</div>
+</center>
+<br>
+<center>
+<div id="div2">
+
+
+  <div class="card" style="width: 16rem;">
+     <div class="card-body">
+    <h6 class="card-title">Catherine Ostheimer</h6>
+    <p class="card-text">VP OF MARKETING</p>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
+
+   <table>
+    <tr>
+      <td class="stro">SPORTS TEAM</td>
+      <td class="lig">8 years</td>
+    </tr>
+    
+     <tr class="tab">
+      <td class="stro">FOOD</td>
+      <td class="lig">CloudNine Review</td>
+    </tr>
+   
+    <tr class="tab">
+      <td class="stro">MOVIE</td>
+      <td class="lig">Customer focus is in its DNA</td>
+    </tr>
+
+    <tr class="tab">
+      <td class="stro">BOOK</td>
+      <td class="lig">Customer focus is in its DNA</td>
+    </tr>
+
+    <tr class="tab">
+      <td class="stro">TRIVIA EXPERTISE</td>
+      <td class="lig">Customer focus is in its DNA</td>
+    </tr>
+
+    <tr class="tab">
+      <td class="stro">HIDDEN TALENT</td>
+      <td class="lig">Customer focus is in its DNA</td>
+    </tr>
+
+    <tr class="tab">
+      <td class="stro">HOBBY</td>
+      <td class="lig">Customer focus is in its DNA</td>
+    </tr>
+  </table>
+</div>  
+
+
+</div>
+</center>
+<br>
+<center>
+<div id="div3">
+
+
+  <div class="card" style="width: 16rem;">
+     <div class="card-body">
+    <h6 class="card-title">Catherine Ostheimer</h6>
+    <p class="card-text">VP OF MARKETING</p>
+  </div>
+  <img src="/home/lipl-213/Downloads/png-clipart-superman-superman-batman-superhero-movie-drawing-superhero-comics-heroes-thumbnail-removebg-preview.png" class="card-img-top" alt="...">
+  
+  <table>
+    <tr>
+      <td class="stro">FAVORITE SUPERHERO</td>
+      <td class="lig">Super-Man</td>
+    </tr>
+    
+    
+  </table>
+</div>  
+
+
+</div>
+</center>
+<br>
+</div>
+
+<script>
+  $(document).ready(function() {
+    // Initially, only the Client content is visible
+    $("#div1").show();
+    $("#div2, #div3").hide();
+
+    $(".emo").click(function() {
+      $(".emo").removeClass("active");
+      $(this).addClass("active");
+      $("#div1").slideDown(200); // Smooth slide down
+      $("#div2, #div3").slideUp(200); // Smooth slide up
+    });
+
+    $(".emo1").click(function() {
+      $(".emo1").removeClass("active");
+      $(this).addClass("active");
+      $("#div2").slideDown(200); // Smooth slide down
+      $("#div1, #div3").slideUp(200); // Smooth slide up
+    });
+
+    $(".emo2").click(function() {
+      $(".emo2").removeClass("active");
+      $(this).addClass("active");
+      $("#div3").slideDown(200); // Smooth slide down
+      $("#div1, #div2").slideUp(200); // Smooth slide up
+    });
+  });
+</script>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
