@@ -1,0 +1,61 @@
+body{
+    background: #000;
+}
+.card {
+    width: 15%;
+    border: 1px solid black;
+    padding: 25px;
+    margin: 10rem;
+    background: rgb(8, 12, 53);
+    color: white;
+    position: relative;
+}
+
+.card p {
+    line-height: 25px;
+}
+
+
+h1 {
+    font-size: 21px;
+}
+
+h1::before {
+    content: "✨ ";
+}
+
+h1::after {
+    content: " ✨";
+}
+
+.card::after, .card::before {
+    --angle: 0deg;
+    content: "";
+    position: absolute;
+    inset: -5px;
+    background: conic-gradient(from var(--angle), red, green, blue, orange, aqua);
+    z-index: -1;
+    padding: 10px;
+}
+
+.card::before {
+    z-index: -2;
+    filter: blur(20px);
+    opacity: 0.7;
+}
+
+.card:hover::after{
+    animation: glowing-border 1.5s linear infinite;
+}
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@keyframes glowing-border {
+    from {
+        --angle: 0deg;
+    } to {
+        --angle: 360deg;
+    }
+}
